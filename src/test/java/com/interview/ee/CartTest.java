@@ -66,4 +66,15 @@ public class CartTest {
         cart.emptyCart();
         assertTrue("cart is NOT empty after empty cart", cart.getItems().size() == 0);
     }
+    
+    @Test(expected = UnsupportedOperationException.class)
+    public void givenCartHasItems_whenEmptyCartViaGetItem_thenNonSupportExceptionReturn() {
+        cart.emptyCart();
+        cart.addItem(testProduct1, 1);
+        cart.addItem(testProduct2, 1);
+        // cart.addItem(testProduct3, 3);
+        assertEquals(2, cart.getItems().size());
+        cart.getItems().putIfAbsent(testProduct3, 3);
+        assertEquals(2, cart.getItems().size());
+    }
 }
