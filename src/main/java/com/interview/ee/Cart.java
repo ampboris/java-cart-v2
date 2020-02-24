@@ -9,8 +9,8 @@ public class Cart {
     private Map<Product, Integer> items = new Hashtable<>();
 
     // list all items in cart
-    public Map<Product, Integer>  getItems() {
-        return this.items;
+    public ImmutableMap<Product, Integer> getItems() {
+        return ImmutableMap.copyOf(this.items);
     }
 
     public void addItem(Product product, Integer quantity) {
