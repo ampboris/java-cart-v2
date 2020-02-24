@@ -1,9 +1,9 @@
 package com.interview.ee;
 
+import com.google.common.collect.ImmutableMap;
+
 import java.util.Hashtable;
-import java.util.List;
 import java.util.Map;
-import java.util.stream.Collectors;
 
 public class Cart {
     private Map<Product, Integer> items = new Hashtable<>();
