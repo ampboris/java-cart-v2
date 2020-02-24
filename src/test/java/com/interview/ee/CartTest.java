@@ -8,15 +8,10 @@ import static org.junit.Assert.*;
 
 public class CartTest {
 
-    // using with Aus calculator
-    private BigDecimal gstPercent = BigDecimal.valueOf(10);
     private Cart cart = new Cart();
     private Product testProduct1 = new Product("test-1", "test product 1", BigDecimal.valueOf(19.99));
     private Product testProduct2 = new Product("test-2", "test product 2", BigDecimal.valueOf(3));
     private Product testProduct3 = new Product("test-3", "test product 3", BigDecimal.valueOf(113.00));
-
-
-
 
     @Test
     public void givenNewProductItem_whenAdd_thenCorrectItemReturn() {
